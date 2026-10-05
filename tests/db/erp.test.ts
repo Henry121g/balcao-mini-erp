@@ -282,6 +282,25 @@ describe("relatórios e alertas", () => {
   });
 });
 
+describe("remoção de organização (redefinição da demo)", () => {
+  it("apagar uma organização remove tudo dela em cascata, sem afetar as outras", async () => {
+    const { orgId: tmp } = await t.signUp("Temporário");
+    const antes = await t.db.query<{ n: number }>(`select count(*)::int n from erp.products where org_id = $1`, [org]);
+    await t.db.query(`delete from erp.organizations where id = $1`, [tmp]);
+    for (const table of ["products", "sales", "sale_items", "stock_movements", "members", "categories"]) {
+      const { rows } = await t.db.query<{ n: number }>(`select count(*)::int n from erp.${table} where org_id = $1`, [tmp]);
+      expect(rows[0].n, table).toBe(0);
+    }
+    const depois = await t.db.query<{ n: number }>(`select count(*)::int n from erp.products where org_id = $1`, [org]);
+    expect(depois.rows[0].n).toBe(antes.rows[0].n);
+  });
+
+  it("um produto com histórico não pode ser apagado isoladamente (nem pelo service_role)", async () => {
+    const agua = await product("BEB-001");
+    await expect(t.db.query(`delete from erp.products where id = $1`, [agua.id])).rejects.toThrow(/foreign key/);
+  });
+});
+
 describe("isolamento entre organizações (RLS)", () => {
   it.each(["products", "sales", "sale_items", "stock_movements", "categories", "suppliers", "members"])(
     "admin de outra organização não lê %s desta",

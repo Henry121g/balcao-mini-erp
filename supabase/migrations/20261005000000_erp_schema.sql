@@ -106,13 +106,14 @@ create table erp.sale_items (
   line_total_cents  bigint generated always as (quantity * unit_price_cents) stored,
   unique (sale_id, product_id),
   foreign key (org_id, sale_id) references erp.sales (org_id, id) on delete cascade,
-  foreign key (org_id, product_id) references erp.products (org_id, id)
+  -- Verificada no commit: apagar a organização inteira funciona; apagar produto com histórico, não.
+  foreign key (org_id, product_id) references erp.products (org_id, id) deferrable initially deferred
 );
 create index on erp.sale_items (org_id, product_id);
 
 create table erp.stock_movements (
   id               bigint generated always as identity primary key,
-  org_id           uuid not null,
+  org_id           uuid not null references erp.organizations (id) on delete cascade,
   product_id       uuid not null,
   type             erp.movement_type not null,
   quantity         int not null check (quantity <> 0),   -- com sinal: + entra, − sai
@@ -122,7 +123,8 @@ create table erp.stock_movements (
   sale_id          uuid references erp.sales (id) on delete set null,
   created_by       uuid references auth.users (id) on delete set null,
   created_at       timestamptz not null default now(),
-  foreign key (org_id, product_id) references erp.products (org_id, id)
+  -- Verificada no commit: apagar a organização inteira funciona; apagar produto com histórico, não.
+  foreign key (org_id, product_id) references erp.products (org_id, id) deferrable initially deferred
 );
 create index on erp.stock_movements (org_id, created_at desc);
 create index on erp.stock_movements (org_id, product_id, created_at desc);
