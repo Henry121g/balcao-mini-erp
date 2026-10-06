@@ -3,7 +3,7 @@
 > Projeto de portfólio com **dados fictícios**, desenvolvido com assistência de IA (Claude Code).
 > Não há empresas, clientes ou vendas reais.
 
-**Demonstração:** _pendente de deploy_ · **CI:** ver aba Actions
+**Demonstração:** [balcao-mini-erp.vercel.app](https://balcao-mini-erp.vercel.app) (contas de demonstração em configuração) · **CI:** ver aba Actions
 
 <!-- Screenshots reais serão adicionadas após o deploy (docs/screenshots/). -->
 
