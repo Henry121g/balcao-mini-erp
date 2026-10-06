@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EmptyState } from "@/components/empty-state";
-import { Alert, buttonStyles } from "@/components/ui";
+import { Alert } from "@/components/ui";
+import { buttonStyles } from "@/components/button-styles";
 import { can, requireViewer } from "@/lib/auth";
 import { formatDateTime, formatInt, formatMoney, localDate } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { EmptyState } from "@/components/empty-state";
-import { Alert, buttonStyles } from "@/components/ui";
+import { Alert } from "@/components/ui";
+import { buttonStyles } from "@/components/button-styles";
 import { requireViewer } from "@/lib/auth";
 import { formatInt, formatLocalDay, formatMoney } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";

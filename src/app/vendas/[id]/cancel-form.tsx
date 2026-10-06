@@ -1,7 +1,8 @@
 "use client";
 
 import { useActionState, useRef } from "react";
-import { Alert, buttonStyles, SubmitButton } from "@/components/ui";
+import { Alert, SubmitButton } from "@/components/ui";
+import { buttonStyles } from "@/components/button-styles";
 import { cancelSale } from "../actions";
 
 export function CancelSaleForm({ saleId }: { saleId: string }) {

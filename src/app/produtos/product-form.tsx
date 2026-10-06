@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useActionState } from "react";
-import { Alert, buttonStyles, Field, SubmitButton } from "@/components/ui";
+import { Alert, Field, SubmitButton } from "@/components/ui";
+import { buttonStyles } from "@/components/button-styles";
 import { saveProduct } from "./actions";
 
 interface Option {

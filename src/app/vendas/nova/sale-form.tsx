@@ -1,7 +1,8 @@
 "use client";
 
 import { useActionState, useMemo, useState } from "react";
-import { Alert, buttonStyles, Field, SubmitButton } from "@/components/ui";
+import { Alert, Field, SubmitButton } from "@/components/ui";
+import { buttonStyles } from "@/components/button-styles";
 import { addToCart, overStock, setQuantity, subtotalCents, type CartLine } from "@/lib/cart";
 import { formatMoney } from "@/lib/format";
 import { parseMoneyToCents } from "@/lib/money";
