@@ -110,7 +110,7 @@ export default async function ReportsPage({ searchParams }: PageProps<"/relatori
                     <td className="p-3 text-right">{d.sales_count}</td>
                     <td className="p-3">
                       <div className="flex items-center gap-2">
-                        <div aria-hidden="true" className="h-3 rounded bg-brand" style={{ width: `${(d.revenue_cents / maxRev) * 100}%`, minWidth: 2 }} />
+                        <div aria-hidden="true" className="h-3 rounded bg-brand-fill" style={{ width: `${(d.revenue_cents / maxRev) * 100}%`, minWidth: 2 }} />
                         <span className="whitespace-nowrap">{formatMoney(d.revenue_cents)}</span>
                       </div>
                     </td>

@@ -75,6 +75,13 @@ funciona, mas apagar **um produto com histórico** é recusado — produtos são
 Schema `erp` no mesmo projeto Supabase das outras demos (o plano gratuito permite 2 projetos). Um
 cadastro feito em outro app do portfólio não ganha organização aqui (teste automatizado).
 
+## Design
+
+Identidade visual baseada no sistema `dashboard` do [open-design](https://github.com/nexu-io/open-design)
+(licença Apache-2.0): superfícies claras e frias, azul-céu nas ações, foco em leitura de números. Os tokens foram adaptados em `src/app/globals.css`, com
+tons de texto ajustados para contraste AA (WCAG 4,5:1) e a cor da marca separada em preenchimento
+(botões) e texto (links e foco). Cada app do portfólio usa um sistema diferente.
+
 ## Arquitetura
 
 ```
