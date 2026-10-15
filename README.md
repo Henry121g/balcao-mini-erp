@@ -5,7 +5,6 @@
 
 **Demonstração:** [balcao-mini-erp.vercel.app](https://balcao-mini-erp.vercel.app) (contas de demonstração em configuração) · **CI:** ver aba Actions
 
-<!-- Screenshots reais serão adicionadas após o deploy (docs/screenshots/). -->
 
 ## Telas
 
