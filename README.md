@@ -7,6 +7,18 @@
 
 <!-- Screenshots reais serão adicionadas após o deploy (docs/screenshots/). -->
 
+## Telas
+
+<table>
+  <tr>
+    <td width="33%"><a href="docs/telas/painel.png"><img src="docs/telas/painel.png" alt="Painel: vendas do dia, margem e alertas de estoque mínimo"></a><br><sub>Painel: vendas do dia, margem e alertas de estoque mínimo</sub></td>
+    <td width="33%"><a href="docs/telas/nova-venda.png"><img src="docs/telas/nova-venda.png" alt="Nova venda com busca, desconto e total em centavos"></a><br><sub>Nova venda com busca, desconto e total em centavos</sub></td>
+    <td width="33%"><a href="docs/telas/relatorios.png"><img src="docs/telas/relatorios.png" alt="Relatórios por dia e por produto"></a><br><sub>Relatórios por dia e por produto</sub></td>
+  </tr>
+</table>
+
+<sub>Capturas com os dados fictícios da demonstração.</sub>
+
 ## O problema
 
 Pequenos comércios controlam estoque em planilhas: o saldo diverge da prateleira, vendas são
