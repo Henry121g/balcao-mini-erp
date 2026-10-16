@@ -8,6 +8,8 @@
 
 ## Telas
 
+▶ **[Vídeo da demonstração](docs/demo.mp4)** (1 a 2 min, com legenda em cada funcionalidade).
+
 <table>
   <tr>
     <td width="33%"><a href="docs/telas/painel.png"><img src="docs/telas/painel.png" alt="Painel: vendas do dia, margem e alertas de estoque mínimo"></a><br><sub>Painel: vendas do dia, margem e alertas de estoque mínimo</sub></td>
